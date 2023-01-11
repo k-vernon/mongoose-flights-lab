@@ -1,0 +1,26 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/flights/new.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/flights" method="POST">
+    
+    <label for="airline-input">Airline:</label>
+    <input required name="airline" type="text" id="airline-input">
+
+    <label for="airport-input">Airport:</label>
+    <input required name="airport" type="text" id="airport-input">
+
+    <label for="flightNo-input">FlightNo:</label>
+    <input required name="flightNo" type="text" id="flightNo-input">
+
+    <label for="departs-input">Departs:</label>
+    <input required name="departs" type="date" id="departs-input">
+
+    <button type="submit">Add Flight</button>
+
+  </form>
+</main>
+
+<%- include('../partials/footer') %> 
